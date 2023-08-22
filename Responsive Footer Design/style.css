@@ -1,0 +1,213 @@
+/* Project Name: Responsive Footer Design
+Youtube: https://youtube.com/@devRasen
+Copyright: ©MdRasen */
+
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom CSS */
+.container {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: #060606;
+  border-top: 4px solid #f4c430;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .footer-top {
+  width: 100%;
+  color: #fff;
+  background: #0e0e0e;
+  padding: 30px 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-top p {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+button {
+  font-size: 16px;
+  background-color: #f4c430;
+  padding: 4px 6px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.footer-top button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.container .footer-bottom {
+  width: 100%;
+  padding: 30px 6% 20px;
+}
+
+.footer-bottom .top-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.top-row .col {
+  flex-basis: 33%;
+  width: 100%;
+}
+
+.col .head-title {
+  color: #f4c430;
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.col .contents {
+  color: #fff;
+  font-size: 16px;
+}
+
+.contents p {
+  opacity: 0.9;
+  padding: 0 5px 10px 0;
+}
+
+.contents ul li {
+  list-style: none;
+  padding: 3px 0;
+}
+
+.contents ul li a {
+  text-decoration: none;
+  color: #8d99ae;
+}
+
+.contents ul li a:hover {
+  color: #f4c430;
+}
+
+.contents .contact-us li i {
+  color: #f4c430;
+  margin-right: 5px;
+}
+
+.contents form input {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+}
+
+.contents form button {
+  margin-top: 5px;
+}
+
+.footer-bottom .line-break {
+  width: 96%;
+  height: 1px;
+  margin: 25px auto;
+}
+
+.bottom-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-row .payment-method,
+.footer-bottom .copyright {
+  flex-basis: 50%;
+}
+
+.bottom-row .payment-method ul {
+  display: flex;
+}
+
+.payment-method li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.payment-method li i {
+  font-size: 30px;
+  color: #8d99ae;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.payment-method li i:hover {
+  color: #f4c430;
+  transform: scale(1.1);
+}
+
+.footer-bottom .copyright p {
+  color: #8d99ae;
+  text-align: end;
+  font-size: 16px;
+}
+
+.footer-bottom .copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom-row .copyright a:hover {
+  color: #f4c430;
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+  .container {
+    position: unset;
+  }
+
+  .footer-bottom .top-row {
+    flex-wrap: wrap;
+  }
+
+  .top-row .col {
+    flex-basis: 50%;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 490px) {
+  .container .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-top p {
+    padding-bottom: 5px;
+  }
+
+  .top-row .col {
+    flex-basis: 100%;
+  }
+
+  .contents form input,
+  .contents form button {
+    width: 100%;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+  }
+
+  .footer-bottom .copyright p {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
